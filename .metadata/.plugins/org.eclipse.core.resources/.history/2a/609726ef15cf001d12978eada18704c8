@@ -1,0 +1,30 @@
+package com.xworkz.oopsprogramming;
+
+public class Laptop {
+	
+	String brand;
+	int price;
+	String colour;
+	byte weight;
+	float screenSize;
+	
+	public Laptop() {
+		System.out.println("Default constructor");
+	}
+	
+	public Laptop(String brand, int price, String colour, byte weight, float screenSize) {
+		
+	}
+	public void storingData() {
+	System.out.println("Storage function");
+	}
+	
+	public void workingPurpose() {
+		System.out.println("Working function");
+	}
+	
+	public void playMusic() {
+		System.out.println("Play music");
+	}
+
+}

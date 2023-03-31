@@ -1,0 +1,18 @@
+package com.xworkz.oopsprogramming;
+
+public class Lenevo extends Laptop {
+	
+	  float screenSize;
+	  String graphics;
+	  
+	  public void playGames() {
+		  System.println("Gaming");
+	  }
+	  
+	  public void keyboardLight() {
+		  System.out.println("Keyboard light feature");
+	  }
+	  
+			  
+
+}

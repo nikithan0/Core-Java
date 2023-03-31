@@ -1,0 +1,11 @@
+package com.xworkz.oopsprogramming;
+
+public class OopsClass {
+	
+		public static void main(String[] args){
+		String name = "Aleena";
+		System.out.println(name);
+		}
+	}
+
+
