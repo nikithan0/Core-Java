@@ -21,6 +21,7 @@ public class Groceries {
 		dao.deleteByString("Chilly powder");
 		
 		dao.searchValue("Sprite");
+		
 	    String[] groceryName =  dao.readGrocery();
 		 for(int i=0; i<groceryName.length; i++) {
 			System.out.println(groceryName[i]);
