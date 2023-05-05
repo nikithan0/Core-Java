@@ -39,8 +39,6 @@ public class VegetablesDao {
 				}
 			}
 		}
-
-		System.out.println("The deletion is unsuccessfull");
 		return false;
 	}
 

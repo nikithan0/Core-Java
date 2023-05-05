@@ -22,7 +22,7 @@ public class VegetableRunner {
 		System.out.println("-----------------------------------------------------------------------");
 
 		VegetablesDto obj1 = dao.findByName("Pumpkin");
-		System.out.println(dto2);
+		System.out.println(obj1);
 		
 		System.out.println("-----------------------------------------------------------------------");
 		
