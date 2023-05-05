@@ -18,7 +18,6 @@ public class VegetablesDao {
 	}
 
 	public VegetablesDto findByName(String name) {
-
 		for (int i = 0; i < vegetable.length; i++) {
 			if (vegetable[i] != null) {
 				if (vegetable[i].getName().equals(name)) {

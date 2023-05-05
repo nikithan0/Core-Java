@@ -9,6 +9,7 @@ public class VegetableRunner {
 	public static void main(String[] args) {
 		VegetablesDao dao = new VegetablesDao();
 		VitaminsDto obj = new VitaminsDto("vitamin A", "100g");
+		VitaminsDto obj1 = new VitaminsDto("vitamin C", "100");
 
 		VegetablesDto dto = new VegetablesDto("Carrot", "Orange", 100, obj, VeggieType.ROOT);
 		dao.save(dto);
@@ -16,13 +17,19 @@ public class VegetableRunner {
 		VegetablesDto dto1 = new VegetablesDto("Lettuce", "Green", 100, obj, VeggieType.LEAFY);
 		dao.save(dto1);
 
-		VegetablesDto dto2 = new VegetablesDto("Pumpkin", "Orange", 100, obj, VeggieType.MARROW);
+		VegetablesDto dto2 = new VegetablesDto("Pumpkin", "Orange", 100, obj1, VeggieType.MARROW);
 		dao.save(dto2);
+		
+		System.out.println("-----------------------------------------------------------------------");
+		
+		System.out.println(VeggieType.ROOT.veg);
+		System.out.println(VeggieType.LEAFY.veg);
+		System.out.println(VeggieType.MARROW.veg);	
 
 		System.out.println("-----------------------------------------------------------------------");
-
-		VegetablesDto obj1 = dao.findByName("Pumpkin");
-		System.out.println(obj1);
+		
+		VegetablesDto veg = dao.findByName("Pumpkin");
+		System.out.println(veg);
 		
 		System.out.println("-----------------------------------------------------------------------");
 		
