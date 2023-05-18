@@ -26,12 +26,15 @@ public class BookRunner {
 		
 		boolean dao2 = subj.save(dto4);
 		System.out.println(dao2);
+		System.out.println("----------------------------------------------------------");
 		
 		BookDto dao3 = subj.findByPrice(180);
 		System.out.println(dao3);
+		System.out.println("----------------------------------------------------------");
 		
 		BookDto dao4 = subj.updateByprice(50, "NoteBook");
 		System.out.println(dao4);
+		System.out.println("----------------------------------------------------------");
 				
 		System.out.println("Price deleted");
 		subj.deleteByPrice(50);

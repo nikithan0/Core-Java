@@ -52,7 +52,7 @@ public class BookDaoTwo extends AbstractDao {
 				if(book[i].getPrice() == price) {
 					book[i] = null;
 					System.out.println("Deleted Successfully");
-					return false;
+					return true;
 				}
 				
 			}
