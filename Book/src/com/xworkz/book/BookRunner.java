@@ -28,21 +28,21 @@ public class BookRunner {
 		System.out.println(dao2);
 		System.out.println("----------------------------------------------------------");
 		
-		BookDto dao3 = subj.findByPrice(180);
+		BookDto dao3 = subj.findByName("Capable");
 		System.out.println(dao3);
 		System.out.println("----------------------------------------------------------");
 		
-		BookDto dao4 = subj.updateByprice(50, "NoteBook");
+		BookDto dao4 = subj.updateByPrice(50, "NoteBook");
 		System.out.println(dao4);
 		System.out.println("----------------------------------------------------------");
 				
+		subj.deleteByName("Notebook");
 		System.out.println("Price deleted");
-		subj.deleteByPrice(50);
 		
 		System.out.println("----------------------------------------------------------");
 		
 		//BookDao methods;
-		BookDto obj = dao.fingByName("ClassMate");
+		BookDto obj = dao.findByName("ClassMate");
 		System.out.println(obj);
 		
 		System.out.println("----------------------------------------------------------");

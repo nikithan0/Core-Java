@@ -5,9 +5,9 @@ import com.xworkz.book.dto.BookDto;
 public abstract class AbstractDao {
 	
 	public abstract boolean save(BookDto dto);
-	public abstract BookDto findByPrice(int price);
-	public abstract BookDto updateByprice(int price, String bookName);
-	public abstract boolean deleteByPrice(int price);
+	public abstract BookDto findByName(String bookName) ;
+	public abstract BookDto updateByPrice(int price, String bookName);
+	public abstract boolean deleteByName(String bookName);
 	public abstract BookDto[] readAll();
 	
 

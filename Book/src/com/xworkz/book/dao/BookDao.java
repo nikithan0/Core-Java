@@ -2,7 +2,7 @@ package com.xworkz.book.dao;
 
 import com.xworkz.book.dto.BookDto;
 
-public class BookDao {
+public class BookDao extends AbstractDao{
 	BookDto[] book = new BookDto[9];
 
 	public boolean save(BookDto dto) {
@@ -26,7 +26,7 @@ public class BookDao {
 		return false;
 	}
 
-	public BookDto fingByName(String bookName) {
+	public BookDto findByName(String bookName) {
 		if (bookName != null && bookName.length() > 3) {
 			for (int i = 0; i < book.length; i++) {
 				if (book[i] != null) {
@@ -87,4 +87,8 @@ public class BookDao {
 	public BookDto[] readAll() {
 		return book;
 	}
+
+	
+
+	
 }

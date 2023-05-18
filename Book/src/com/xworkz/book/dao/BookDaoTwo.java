@@ -20,10 +20,10 @@ public class BookDaoTwo extends AbstractDao {
 	}
 
 	
-	public BookDto findByPrice(int price) {
+	public BookDto findByName(String bookName)  {
 		for(int i=0; i<book.length; i++) {
 			if(book[i]!=null) {
-				if(book[i].getPrice()==price) {
+				if(book[i].getBookName().equals(bookName)) {
 					System.out.println(" price is found");
 					return book[i];
 				}
@@ -33,7 +33,7 @@ public class BookDaoTwo extends AbstractDao {
 	}
 	
 
-	public BookDto updateByprice(int price, String bookName) {
+	public BookDto updateByPrice(int price, String bookName) {
 		for(int i=0; i<book.length; i++) {
 			if(book[i]!=null) {
 				if(book[i].getPrice() == price) {
@@ -46,13 +46,13 @@ public class BookDaoTwo extends AbstractDao {
 		return null;
 	}
 	
-	public boolean deleteByPrice(int price) {
+	public boolean deleteByName(String bookName) {
 		for(int i=0; i<book.length; i++) {
 			if(book[i]!=null) {
-				if(book[i].getPrice() == price) {
+				if(book[i].getBookName().equals(bookName)) {
 					book[i] = null;
 					System.out.println("Deleted Successfully");
-					return true;
+					return true ;
 				}
 				
 			}
