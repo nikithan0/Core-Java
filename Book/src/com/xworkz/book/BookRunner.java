@@ -26,6 +26,10 @@ public class BookRunner {
 		
 		boolean dao2 = subj.save(dto4);
 		System.out.println(dao2);
+		boolean dao8 = subj.save(dto3);
+		System.out.println(dao8);
+		boolean dao9 = subj.save(dto5);
+		System.out.println(dao9);
 		System.out.println("----------------------------------------------------------");
 		
 		BookDto dao3 = subj.findByName("Capable");
