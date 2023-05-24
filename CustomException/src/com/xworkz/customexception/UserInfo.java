@@ -7,9 +7,11 @@ public class UserInfo {
 			System.out.println("The name is valid");
 			if (password == 44444667) {
 				System.out.println("Checking Password");
+				
 			}
 			throw new InvalidUserNameException("User name is not found");
 		}
+	
 		throw new InvalidPasswordException("The given password is not valid");
 	}
 
@@ -24,4 +26,5 @@ public class UserInfo {
 		}
 		throw new LoginFailedException("Login failed ");
 	}
+   
 }
