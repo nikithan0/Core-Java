@@ -4,9 +4,13 @@ public class CustomExcRunner {
 
 	public static void main(String[] args) {
 		try {
-			UserInfo.checkUserInfo("Abc", 78736);	
+			UserInfo.checkUserInfo("Abcd", 78736);	
 		}			
-		catch (InvalidUserNameException |InvalidPasswordException e) {
+		catch (InvalidUserNameException e) {
+			e.printStackTrace();
+		}
+	
+	catch(InvalidPasswordException e) {
 			
 			e.printStackTrace();		
 	}

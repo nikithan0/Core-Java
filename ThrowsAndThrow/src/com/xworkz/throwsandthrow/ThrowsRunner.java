@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 public abstract class ThrowsRunner {
 
 	public static void main(String[] args) {
-		myMethod3();
+		
       try {
 		myMethod1();
 		
