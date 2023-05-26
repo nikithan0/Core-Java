@@ -15,7 +15,7 @@ public class CustomExcRunner {
 			e.printStackTrace();		
 	}
 		try {
-			UserInfo.loginInformation(1237, "jwj@ie");
+			UserInfo.loginInformation(1237, "anni@gmail");
 		} catch (LoginFailedException e) {
 			
 			e.printStackTrace();

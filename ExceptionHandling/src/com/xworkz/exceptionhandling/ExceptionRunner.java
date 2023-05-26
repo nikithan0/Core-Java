@@ -15,20 +15,20 @@ public class ExceptionRunner {
 			System.out.println("Hello");
 			//Class.forName("h");
 		}
-//		catch(FileNotFoundException e){
-//			e.printStackTrace();
-//			System.out.println("File not found but handled");
-//		}
+		catch(FileNotFoundException e){
+			e.printStackTrace();
+			System.out.println("File not found but handled");
+		}
 //		catch(ClassNotFoundException exc) {
 //			exc.printStackTrace();
 //			System.out.println("Classnot found ");
 //		}
-		catch(Exception e) {
-	    System.out.println(e);
-		}
-		
-		System.out.println("Print world");
-
+//		catch(Exception e) {
+//	    System.out.println(e);
+//		}
+//		
+//		System.out.println("Print world");
+//
 	}
 
 }
