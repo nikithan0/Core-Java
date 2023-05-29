@@ -13,6 +13,7 @@ public interface TelevisionDao {
 	public TelevisionDto findByName(String name) throws FailedToFindNameException;
 	public TelevisionDto delete(Integer price) throws FailedToDeleteException;
 	public TelevisionDto findbyName(String name, Integer price);
+	public TelevisionDto updateMethod(String name, String color, Integer price) ;
 	public TelevisionDto[] readAll();
 	
 	

@@ -36,8 +36,7 @@ public class TelevisionImpl implements TelevisionDao {
 		if (color != null & color.length() > 3) {
 			for (int i = 0; i < tv.length; i++) {
 				if (tv[i] != null) {
-					if (tv[i].getColor().equals(color))
-						;
+					if (tv[i].getColor().equals(color));
 					tv[i].setName(name);
 					System.out.println("The Name is upated successfull");
 					return tv[i];
@@ -51,7 +50,7 @@ public class TelevisionImpl implements TelevisionDao {
 	}
 
 	public TelevisionDto findByName(String name) throws FailedToFindNameException {
-		if (name != null && name.length() >2) {
+		if (name != null && name.length() > 2) {
 			for (int i = 0; i < tv.length; i++) {
 				if (tv[i] != null) {
 					if (tv[i].getName().equals(name)) {
@@ -67,13 +66,13 @@ public class TelevisionImpl implements TelevisionDao {
 		return null;
 	}
 
-	@Override
+	
 	public TelevisionDto delete(Integer price) throws FailedToDeleteException {
-		if(price!=null) {
-			for(int i=0; i<tv.length; i++) {
-				if(tv!=null) {
-					if(tv[i].getPrice().equals(price)) {
-						tv[i]=null;
+		if (price != null) {
+			for (int i = 0; i < tv.length; i++) {
+				if (tv != null) {
+					if (tv[i].getPrice().equals(price)) {
+						tv[i] = null;
 						System.out.println("The price deleted successfully");
 						return tv[i];
 					}
@@ -84,32 +83,53 @@ public class TelevisionImpl implements TelevisionDao {
 		System.out.println("The given price is not valid");
 		return null;
 	}
-	public TelevisionDto[] readAll() {		
+
+	public TelevisionDto[] readAll() {
 		return tv;
 	}
-	
+
 	public TelevisionDto findbyName(String name, Integer price) {
-		if(name!=null && name.length()>3) {
-			if(price!=null) {
-				for(int i=0; i<tv.length; i++) {
-					if(tv[i]!=null) {
+		if (name != null && name.length() > 3) {
+			if (price != null) {
+				for (int i = 0; i < tv.length; i++) {
+					if (tv[i] != null) {
 						tv[i].getName().equals(name);
 						tv[i].getPrice().equals(price);
 						System.out.println("The given dtos are found");
 						return tv[i];
 					}
 				}
-				System.out.println("The given dtos are not found");
+				System.out.println("The given dto is not found");
 				return null;
 			}
 			System.out.println("The price is not valid");
 		}
 		System.out.println("The name is not valid");
 		return null;
+	}
+	
+	public TelevisionDto updateMethod(String name, String color, Integer price) {
+		if(name!=null && color!=null) {
+			if(name.length()>3 && color.length()>3) {
+				for(int i=0; i<tv.length; i++) {
+					if(tv[i]!=null) {
+						if(tv[i].getName().equals(name)){
+							if(tv[i].getColor().equals(color)) {
+								tv[i].setPrice(price);
+								System.out.println("The price  is updated successfully");
+								return tv[i];
+							}	
+						}
+					}
+				}
+				System.out.println("The name is not updated");
+				return null;
+			}
+			System.out.println("The length is valid");
+			return null;
+		}
+		System.out.println("The name and color is not valid");
+		return null;
 		
 	}
-
-		
-	}
-
-
+}
