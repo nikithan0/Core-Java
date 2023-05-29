@@ -6,14 +6,14 @@ import com.xworkz.engineproject.custom.FailedtToDeleteException;
 import com.xworkz.engineproject.custom.LengthIsNotValidException;
 import com.xworkz.engineproject.dto.EngineDto;
 
-public class EngineImpl {
+public class EngineImpl implements EngineInterface {
 
 	EngineDto[] engine = new EngineDto[10];
 
 	public boolean save(EngineDto dto) throws LengthIsNotValidException, FailedToSaveException {
 		if (dto != null) {
 			if (dto.getName() != null) {
-				if (dto.getName().length() >3) {
+				if (dto.getName().length() > 3) {
 					System.out.println("The lenth of the name is valid");
 					for (int i = 0; i < engine.length; i++) {
 						if (engine[i] == null) {
@@ -35,7 +35,7 @@ public class EngineImpl {
 
 	public EngineDto update(String name, int price) throws FailedToUpdateException {
 		if (name != null) {
-			if (name.length()>3) {
+			if (name.length() > 3) {
 				for (int i = 0; i < engine.length; i++) {
 					if (engine[i] != null) {
 						if (engine[i].getName().equals(name)) {
@@ -49,7 +49,7 @@ public class EngineImpl {
 			}
 			System.out.println("The lenghtis not valid");
 			return null;
-			
+
 		}
 		System.out.println("The given name is not valid");
 		return null;
@@ -65,13 +65,15 @@ public class EngineImpl {
 					return engine[i];
 				}
 			}
-			throw new FailedtToDeleteException("Failed to delete the name");		
+			throw new FailedtToDeleteException("Failed to delete the name");
 		}
 		System.out.println("The given name is not valid");
 		return null;
 	}
+
 	public EngineDto[] readAll() {
 		return engine;
 	}
+
 
 }
